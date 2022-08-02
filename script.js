@@ -6,10 +6,10 @@ czytaj().then((d) => data = d);
 async function czytaj() {
     return await (await fetch("tt.json")).json();
 }
-// function blok() {
-//     // const blokowanie = document.getElementsById("d");
-//     // blokowanie.setAttribute("onclick", ";");
-// }
+function blok() {
+    // const blokowanie = document.getElementsById("d");
+    // blokowanie.setAttribute("onclick", ";");
+}
 // funkcja obsługująca wyświetlanie tekstu w odpowiednim miejscu wraz z obsługą loadera
 function kalendar() {
     const tekst = document.getElementById("test");
@@ -109,7 +109,7 @@ window.onload = kalendarz;
 function kalendarz() {
     var numer = "";
     for (i = 0; i <= 30; i++) {
-        numer = numer + '<a href="#" onclick="kalendar()" class="day"><div class="dzien"><p>' + day[i] + '</p></div></a>';
+        numer += '<a href="#" class="day"><div onclick="kalendar()" class="dzien"><p>' + day[i] + '</p></div></a>';
         if ((i + 1) % 7 == 0) {
             numer = numer + '<div style="clear: both"></div>';
         }
