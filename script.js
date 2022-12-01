@@ -7,13 +7,12 @@ async function czytaj() {
     return await (await fetch("tt.json")).json();
 }
 // funkcja obsługująca generowanie tekstu z tt.json oraz jego pokazywanie wraz z animacją i loaderem oraz animacją przewijania do tekstu i z powrotem 
-function blok(target) {
-    const blokowanie = target;
-    blokowanie.setAttribute("onclick", ";");
-    blokowanie.classList.add("blok");
-
-}
-function kalendar(event) {
+// function blok() {
+//     const blokowanie = document.getElementsByClassName("dzien");
+//     blokowanie.setAttribute("onclick", ";");
+//     blokowanie.classList.add("blok");
+// }
+function kalendar() {
     const tekst = document.getElementById("test");
     tekst.classList.add("tekst");
     if (data1.length == 0) data1 = data;
@@ -26,7 +25,7 @@ function kalendar(event) {
     d.classList.remove("hide");
     document.getElementById("loader").style.display = "block";
     myVar = setTimeout(showpage, 3000);
-    // myvar1 = setTimeout(hide, 10000);
+    myvar1 = setTimeout(hide, 10000);
     jQuery(function ($) {
         $.scrollTo(0);
         $('.day').click(function () {
@@ -39,23 +38,23 @@ function kalendar(event) {
             $.scrollTo($('#up'), 2000);
         });
     });
-    blok(event.target);
+    // blok();
 }
 // funkcja ospowiednio pokazująca oraz ukrywająca loader oraz tekst
 function showpage() {
     document.getElementById("loader").style.display = "none";
     document.getElementById("mydiv").style.display = "block";
 }
-// function hide() {
-//     const f = document.getElementById("mydiv");
-//     f.classList.add("hide");
-//     // f.style.display = "none";
-//     // document.getElementById("mydiv").style.display = "none";
-//     // const d = document.getElementById("k");
-//     // while (d.hasChildNodes()) {
-//     //     d.removeChild(d.firstChild);
-//     // }
-// }
+function hide() {
+    const f = document.getElementById("mydiv");
+    f.classList.add("hide");
+    // f.style.display = "none";
+    // document.getElementById("mydiv").style.display = "none";
+    // const d = document.getElementById("k");
+    // while (d.hasChildNodes()) {
+    //     d.removeChild(d.firstChild);
+    // }
+}
 // funkcja pobierająca datę (Rok i zapisaną w tablicę nazwę miesiąca na sztywno "Grudzień")
 function time() {
     // zmienna year ospowiada za przechowywanie obiektu klasy Date
@@ -114,7 +113,7 @@ window.onload = kalendarz;
 function kalendarz() {
     var numer = "";
     for (i = 0; i <= 30; i++) {
-        numer += '<a href="#" class="day"><div data-button-${i} onclick="kalendar(event)" class="dzien"><p>' + day[i] + '</p></div></a>';
+        numer = numer + '<a href="#" class="day"><div id="d" onclick="kalendar()" class="dzien"><p>' + day[i] + '</p></div></a>';
         if ((i + 1) % 7 == 0) {
             numer = numer + '<div style="clear: both"></div>';
         }
