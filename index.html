@@ -1,188 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>index</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-    <script src="script.js"></script>
-    <script src="jquery-1.11.3.min.js"></script>
-    <script src="jquery.scrollTo.min.js"></script>
-  </head>
 
-  <body onload="time()">
-    <header id="up">
-      <h1>Kalendarz Adwentowy</h1>
-    </header>
-    <main id="main">
-      <h2>
-        <p id="date"></p>
-        <p id="msc"></p>
-        Kliknij Dzień
-      </h2>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>1</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>2</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>3</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>4</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>5</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>6</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>7</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>8</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>9</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>10</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>11</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>12</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>13</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>14</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>15</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>16</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>17</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>18</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>19</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>20</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>21</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>22</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>23</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>24</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>25</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>26</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>27</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>28</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>29</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>30</p>
-        </div>
-      </a>
-      <a href="#" class="day">
-        <div onclick="kalendar()" class="dzien">
-          <p>31</p>
-        </div>
-      </a>
-      <div id="loader"></div>
-      <div id="k">
-        <div style="display: none" id="mydiv" class="animate-bottom">
-          <div id="test"></div>
-        </div>
-      </div>
-    </main>
-    <footer id="t">
-      <h1>Project by JG</h1>
-    </footer>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <title>index</title>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <script src="script.js"></script>
+  <script src="jquery-1.11.3.min.js"></script>
+  <script src="jquery.scrollTo.min.js"></script>
+</head>
+
+<body>
+  <header id="up">
+    <h1>Kalendarz Adwentowy</h1>
+  </header>
+  <h2>
+    <p id="date"></p>
+    <p id="msc"></p>
+    Kliknij Dzień
+  </h2>
+  <main id="main">
+  </main>
+  <div id="loader"></div>
+  <div id="k">
+    <div style="display: none" id="mydiv" class="animate-bottom">
+      <div id="test"></div>
+    </div>
+  </div>
+  <footer id="t">
+    <h1>Project by JG</h1>
+  </footer>
+</body>
+
 </html>
