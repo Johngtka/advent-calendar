@@ -172,34 +172,3 @@ footer {
     opacity: 0;
     transition: 1s;
 }
-
-/* .hide {
-    animation-name: hidebottom;
-    animation-duration: 1s;
-}
-
-@keyframes hidebottom {
-    from {
-        bottom: 0;
-        opacity: 0;
-    }
-
-    to {
-        bottom: -200px;
-        opacity: 1;
-    }
-} */
-
-/* @-webkit-keyframes hidebottom {
-    from {
-        bottom: -100px;
-        opacity: 0
-    }
-
-    to {
-        bottom: 0px;
-        opacity: 1
-    }
-    -webkit-animation-name: hidebottom;
-    -webkit-animation-duration: 1s;
-} */
