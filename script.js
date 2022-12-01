@@ -19,7 +19,7 @@ function kalendar() {
     // console.log(data1);
     var index = Math.floor(Math.random() * data1.length);
     var t = document.getElementById("test");
-    t.innerHTML = '<p>' + data1[index] + '</p>' + '<a href="#" id="back">Powrót</a>';
+    t.innerHTML = '<p>' + data1[index] + '</p>';
     data1.splice(index, 1);
     const d = document.getElementById("mydiv");
     d.classList.remove("hide");
@@ -46,14 +46,11 @@ function showpage() {
     document.getElementById("mydiv").style.display = "block";
 }
 function hide() {
-    const f = document.getElementById("mydiv");
-    f.classList.add("hide");
-    // f.style.display = "none";
-    // document.getElementById("mydiv").style.display = "none";
-    // const d = document.getElementById("k");
-    // while (d.hasChildNodes()) {
-    //     d.removeChild(d.firstChild);
-    // }
+    const krycie = document.getElementById("test");
+    krycie.classList.add("hidden");
+    krycie.addEventListener('transitionend', () => {
+        krycie.remove();
+    });
 }
 // funkcja pobierająca datę (Rok i zapisaną w tablicę nazwę miesiąca na sztywno "Grudzień")
 function time() {

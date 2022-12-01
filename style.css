@@ -168,7 +168,12 @@ footer {
     }
 }
 
-.hide {
+.hidden {
+    opacity: 0;
+    transition: 1s;
+}
+
+/* .hide {
     animation-name: hidebottom;
     animation-duration: 1s;
 }
@@ -183,7 +188,7 @@ footer {
         bottom: -200px;
         opacity: 1;
     }
-}
+} */
 
 /* @-webkit-keyframes hidebottom {
     from {
