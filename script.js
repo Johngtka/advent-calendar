@@ -11,6 +11,7 @@ function blok(target) {
     const blokowanie = target;
     blokowanie.setAttribute("onclick", ";");
     blokowanie.classList.add("blok");
+
 }
 function kalendar(event) {
     const tekst = document.getElementById("test");
