@@ -8,12 +8,11 @@ async function czytaj() {
 }
 // funkcja obsługująca generowanie tekstu z tt.json oraz jego pokazywanie wraz z animacją i loaderem oraz animacją przewijania do tekstu i z powrotem 
 function blok() {
-    const blokowanie = document.getElementById("d");
+    const blokowanie = document.getElementsByClassName("dzien");
     blokowanie.setAttribute("onclick", ";");
     blokowanie.classList.add("blok");
 }
 function kalendar() {
-    blok();
     const tekst = document.getElementById("test");
     tekst.classList.add("tekst");
     if (data1.length == 0) data1 = data;
@@ -39,6 +38,7 @@ function kalendar() {
             $.scrollTo($('#up'), 2000);
         });
     });
+    blok();
 }
 // funkcja ospowiednio pokazująca oraz ukrywająca loader oraz tekst
 function showpage() {
@@ -113,7 +113,7 @@ window.onload = kalendarz;
 function kalendarz() {
     var numer = "";
     for (i = 0; i <= 30; i++) {
-        numer = numer + '<a href="#" class="day"><div id="d" onclick="kalendar()" class="dzien"><p>' + day[i] + '</p></div></a>';
+        numer = numer + '<a href="#" class="day"><div data-button-${i} onclick="kalendar()" class="dzien"><p>' + day[i] + '</p></div></a>';
         if ((i + 1) % 7 == 0) {
             numer = numer + '<div style="clear: both"></div>';
         }
