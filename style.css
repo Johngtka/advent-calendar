@@ -115,11 +115,6 @@ footer {
     display: inline;
 }
 
-.blok {
-    background-color: lightblue;
-    opacity: 0.9;
-}
-
 #loader {
     display: none;
     z-index: 1;

@@ -6,12 +6,11 @@ czytaj().then((d) => data = d);
 async function czytaj() {
     return await (await fetch("tt.json")).json();
 }
-// funkcja obsługująca generowanie tekstu z tt.json oraz jego pokazywanie wraz z animacją i loaderem oraz animacją przewijania do tekstu i z powrotem 
 // function blok() {
-//     const blokowanie = document.getElementsByClassName("dzien");
-//     blokowanie.setAttribute("onclick", ";");
-//     blokowanie.classList.add("blok");
+//     // const blokowanie = document.getElementsById("d");
+//     // blokowanie.setAttribute("onclick", ";");
 // }
+// funkcja obsługująca wyświetlanie tekstu w odpowiednim miejscu wraz z obsługą loadera
 function kalendar() {
     const tekst = document.getElementById("test");
     tekst.classList.add("tekst");
@@ -32,12 +31,12 @@ function kalendar() {
             $.scrollTo($('#t'), 2000);
         });
     });
-    jQuery(function ($) {
-        $.scrollTo(0);
-        $('#back').click(function () {
-            $.scrollTo($('#up'), 2000);
-        });
-    });
+    // jQuery(function ($) {
+    //     $.scrollTo(0);
+    //     $('#back').click(function () {
+    //         $.scrollTo($('#up'), 2000);
+    //     });
+    // });
     // blok();
 }
 // funkcja ospowiednio pokazująca oraz ukrywająca loader oraz tekst
@@ -110,7 +109,7 @@ window.onload = kalendarz;
 function kalendarz() {
     var numer = "";
     for (i = 0; i <= 30; i++) {
-        numer = numer + '<a href="#" class="day"><div id="d" onclick="kalendar()" class="dzien"><p>' + day[i] + '</p></div></a>';
+        numer = numer + '<a href="#" onclick="kalendar()" class="day"><div class="dzien"><p>' + day[i] + '</p></div></a>';
         if ((i + 1) % 7 == 0) {
             numer = numer + '<div style="clear: both"></div>';
         }
