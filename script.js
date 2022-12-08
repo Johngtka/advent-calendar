@@ -87,7 +87,7 @@
 // }
 
 async function load() {
-    const texts =  await (await fetch('texts.json')).json()
+    const texts = await (await fetch('texts.json')).json()
     return {
         texts,
         usedDays: localStorage.getItem('used-days') ? JSON.parse(localStorage.getItem('used-days')) : [],
@@ -96,7 +96,7 @@ async function load() {
 }
 
 function onDayClick(options) {
-    if(!this.classList.contains('disable')){
+    if (!this.classList.contains('disable')) {
         this.classList.add('disable')
         options.data.usedDays.push(options.day)
         localStorage.setItem('used-days', JSON.stringify(options.data.usedDays))
@@ -108,12 +108,12 @@ window.onload = () => {
     load().then((data) => {
         console.log(data.usedDays)
         const mainElement = document.getElementById('main')
-        if(data.date.getMonth() === 11) {
-            for(let i = 1; i <= 30; i++){
+        if (data.date.getMonth() === 11) {
+            for (let i = 1; i <= 30; i++) {
                 const dayElement = document.createElement('div')
                 dayElement.classList.add('day')
                 dayElement.classList.add('dzien')
-                if(i > data.date.getDate() || data.usedDays.includes(i)) {
+                if (i > data.date.getDate() || data.usedDays.includes(i)) {
                     dayElement.classList.add('disable')
                 } else {
                     dayElement.addEventListener('click', onDayClick.bind(dayElement, {
