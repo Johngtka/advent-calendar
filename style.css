@@ -96,7 +96,17 @@ box-shadow: 0px 0px 100px 8px rgba(66, 68, 90, 1);
 
 .disable {
     background-color: #4f905f;
+    background-image: url(/b.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
 }
+
+/* .disable:hover {
+    background-image: url(/images.jpg);
+    z-index: -100;
+} */
 
 footer {
     position: relative;

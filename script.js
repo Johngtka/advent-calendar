@@ -26,10 +26,11 @@ window.onload = () => {
             document.getElementById("date").innerHTML = year
             for (let i = 1; i <= 30; i++) {
                 const dayElement = document.createElement('div')
-                dayElement.classList.add('day')
+                // dayElement.classList.add('day')
                 dayElement.classList.add('dzien')
                 if (i > data.date.getDate() || data.usedDays.includes(i)) {
                     dayElement.classList.add('disable')
+
                 } else {
                     dayElement.addEventListener('click', onDayClick.bind(dayElement, {
                         day: i,
