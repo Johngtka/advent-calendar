@@ -1,3 +1,46 @@
+async function load() {
+    const texts = await (await fetch('texts.json')).json()
+    return {
+        texts,
+        usedDays: localStorage.getItem('used-days') ? JSON.parse(localStorage.getItem('used-days')) : [],
+        date: new Date()
+    }
+}
+
+function onDayClick(options) {
+    if (!this.classList.contains('disable')) {
+        this.classList.add('disable')
+        options.data.usedDays.push(options.day)
+        localStorage.setItem('used-days', JSON.stringify(options.data.usedDays))
+        alert(options.data.texts.splice(Math.round(Math.random() * options.data.texts.length), 1)[0])
+    }
+}
+
+window.onload = () => {
+    load().then((data) => {
+        console.log(data.usedDays)
+        const mainElement = document.getElementById('main')
+        if (data.date.getMonth() === 11) {
+            for (let i = 1; i <= 30; i++) {
+                const dayElement = document.createElement('div')
+                dayElement.classList.add('day')
+                dayElement.classList.add('dzien')
+                if (i > data.date.getDate() || data.usedDays.includes(i)) {
+                    dayElement.classList.add('disable')
+                } else {
+                    dayElement.addEventListener('click', onDayClick.bind(dayElement, {
+                        day: i,
+                        data
+                    }))
+                }
+                dayElement.innerHTML = '<p>' + i + '</p>'
+                mainElement.appendChild(dayElement)
+            }
+        } else {
+            mainElement.innerText = 'Nie ma grudnia'
+        }
+    })
+}
 // var data1 = [];
 // var data = [];
 // var myVar;
@@ -85,47 +128,3 @@
 //     document.getElementById("main").innerHTML = numer;
 //     time();
 // }
-
-async function load() {
-    const texts = await (await fetch('texts.json')).json()
-    return {
-        texts,
-        usedDays: localStorage.getItem('used-days') ? JSON.parse(localStorage.getItem('used-days')) : [],
-        date: new Date()
-    }
-}
-
-function onDayClick(options) {
-    if (!this.classList.contains('disable')) {
-        this.classList.add('disable')
-        options.data.usedDays.push(options.day)
-        localStorage.setItem('used-days', JSON.stringify(options.data.usedDays))
-        alert(options.data.texts.splice(Math.round(Math.random() * options.data.texts.length), 1)[0])
-    }
-}
-
-window.onload = () => {
-    load().then((data) => {
-        console.log(data.usedDays)
-        const mainElement = document.getElementById('main')
-        if (data.date.getMonth() === 11) {
-            for (let i = 1; i <= 30; i++) {
-                const dayElement = document.createElement('div')
-                dayElement.classList.add('day')
-                dayElement.classList.add('dzien')
-                if (i > data.date.getDate() || data.usedDays.includes(i)) {
-                    dayElement.classList.add('disable')
-                } else {
-                    dayElement.addEventListener('click', onDayClick.bind(dayElement, {
-                        day: i,
-                        data
-                    }))
-                }
-                dayElement.innerHTML = '<p>' + i + '</p>'
-                mainElement.appendChild(dayElement)
-            }
-        } else {
-            mainElement.innerText = 'Nie ma grudnia'
-        }
-    })
-}
