@@ -121,7 +121,7 @@ window.onload = () => {
                         data
                     }))
                 }
-                dayElement.innerText = i
+                dayElement.innerHTML = '<p>' + i + '</p>'
                 mainElement.appendChild(dayElement)
             }
         } else {
