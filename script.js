@@ -22,8 +22,8 @@ window.onload = () => {
         if (data.date.getMonth() + 1 === 12) {
             var year = data.date.getFullYear()
             var month = "Grudzień"
-            document.getElementById("msc").innerHTML = month
             document.getElementById("date").innerHTML = year
+            document.getElementById("msc").innerHTML = month
             for (let i = 1; i <= 30; i++) {
                 const dayElement = document.createElement('div')
                 dayElement.classList.add('day')
