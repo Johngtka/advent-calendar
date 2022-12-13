@@ -47,69 +47,45 @@ window.onload = () => {
         }
     })
 }
-// var data1 = [];
-// var data = [];
+// const data1 = [];
+// const data = [];
 // var myVar;
 // var myvar1;
-// czytaj().then((d) => data = d);
-// async function czytaj() {
-//     return await (await fetch("tt.json")).json();
-// }
-// // function blok() {
-// //     // const blokowanie = document.getElementsById("d");
-// //     // blokowanie.setAttribute("onclick", ";");
-// // }
-// // funkcja obsługująca wyświetlanie tekstu w odpowiednim miejscu wraz z obsługą loadera
 // function kalendar() {
-//     const tekst = document.getElementById("test");
-//     tekst.classList.add("tekst");
-//     if (data1.length == 0) data1 = data;
+//     const tekst = document.querySelector('test')
+//     tekst.classList.add("tekst")
+//     if (data1.length == 0) data1 = data
 //     // console.log(data1);
-//     var index = Math.floor(Math.random() * data1.length);
-//     var t = document.getElementById("test");
-//     t.innerHTML = '<p>' + data1[index] + '</p>';
-//     data1.splice(index, 1);
-//     const d = document.getElementById("mydiv");
-//     d.classList.remove("hide");
-//     document.getElementById("loader").style.display = "block";
-//     myVar = setTimeout(showpage, 3000);
-//     myvar1 = setTimeout(hide, 10000);
+//     var index = Math.floor(Math.random() * data1.length)
+//     tekst.innerHTML = '<p>' + data1[index] + '</p>'
+//     data1.splice(index, 1)
+//     const d = document.querySelector('#mydiv')
+//     d.classList.remove("hide")
+//     document.querySelector('#loader').style.display = "block"
+//     myVar = setTimeout(showpage, 3000)
+//     myvar1 = setTimeout(hide, 10000)
 //     jQuery(function ($) {
-//         $.scrollTo(0);
+//         $.scrollTo(0)
 //         $('.day').click(function () {
-//             $.scrollTo($('#t'), 2000);
-//         });
-//     });
+//             $.scrollTo($('#t'), 2000)
+//         })
+//     })
 //     jQuery(function ($) {
-//         $.scrollTo(0);
+//         $.scrollTo(0)
 //         $('#t').click(function () {
-//             $.scrollTo($('#up'), 2000);
-//         });
-//     });
-//     // blok();
+//             $.scrollTo($('#up'), 2000)
+//         })
+//     })
 // }
 // // funkcja ospowiednio pokazująca oraz ukrywająca loader oraz tekst
 // function showpage() {
-//     document.getElementById("loader").style.display = "none";
-//     document.getElementById("mydiv").style.display = "block";
+//     document.querySelector('#loader').style.display = "none"
+//     document.querySelector('#mydiv').style.display = "block"
 // }
 // function hide() {
-//     const krycie = document.getElementById("test");
-//     krycie.classList.add("hidden");
+//     const krycie = document.querySelector('#test')
+//     krycie.classList.add("hidden")
 //     krycie.addEventListener('transitionend', () => {
-//         krycie.remove();
-//     });
-// }
-
-// window.onload = kalendarz;
-// function kalendarz() {
-//     var numer = "";
-//     for (i = 0; i <= 30; i++) {
-//         numer += '<a href="#" class="day"><div onclick="kalendar()" class="dzien"><p>' + i + 1 + '</p></div></a>';
-//         if ((i + 1) % 7 == 0) {
-//             numer += '<div style="clear: both"></div>';
-//         }
-//     }
-//     document.getElementById("main").innerHTML = numer;
-//     time();
+//         krycie.remove()
+//     })
 // }
