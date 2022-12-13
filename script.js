@@ -18,12 +18,12 @@ function onDayClick(options) {
 window.onload = () => {
     load().then((data) => {
         console.log(data.usedDays)
-        const mainElement = document.getElementById('main')
+        const mainElement = document.querySelector('#main')
         if (data.date.getMonth() + 1 === 12) {
             var year = data.date.getFullYear()
             var month = "Grudzień"
-            document.getElementById("date").innerHTML = year
-            document.getElementById("msc").innerHTML = month
+            document.querySelector('#date').innerHTML = year
+            document.querySelector('#msc').innerHTML = month
             for (let i = 1; i <= 30; i++) {
                 const dayElement = document.createElement('div')
                 dayElement.classList.add('day')
@@ -41,8 +41,8 @@ window.onload = () => {
                 mainElement.appendChild(dayElement)
             }
         } else {
-            document.getElementById("interact").style.display = "none"
-            document.getElementById("info").style.display = "none"
+            document.querySelector('#interact').style.display = "none"
+            document.querySelector('#info').style.display = "none"
             mainElement.innerHTML = '<h1 style="margin:0; font-size:150px">Nie ma grudnia</h1>'
         }
     })
