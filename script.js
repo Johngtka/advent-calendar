@@ -6,7 +6,6 @@ async function load() {
         date: new Date()
     }
 }
-
 function onDayClick(options) {
     if (!this.classList.contains('disable')) {
         this.classList.add('disable')
@@ -55,7 +54,7 @@ window.onload = () => {
 //     const tekst = document.querySelector('test')
 //     tekst.classList.add("tekst")
 //     if (data1.length == 0) data1 = data
-//     // console.log(data1);
+//     console.log(data1);
 //     var index = Math.floor(Math.random() * data1.length)
 //     tekst.innerHTML = '<p>' + data1[index] + '</p>'
 //     data1.splice(index, 1)
@@ -77,7 +76,6 @@ window.onload = () => {
 //         })
 //     })
 // }
-// // funkcja ospowiednio pokazująca oraz ukrywająca loader oraz tekst
 // function showpage() {
 //     document.querySelector('#loader').style.display = "none"
 //     document.querySelector('#mydiv').style.display = "block"
